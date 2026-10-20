@@ -34,7 +34,7 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           user: lianbeast
           template: markdown
-          markdown: https://raw.githubusercontent.com/lianbeast/Personal-Site/main/.github/metrics.profile.md
+          markdown: https://raw.githubusercontent.com/lianbeast/lianbeast/main/.github/metrics.profile.md
           filename: README.md.tmp
           markdown_cache: .cache
           config_timezone: "UTC"
