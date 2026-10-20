@@ -40,8 +40,7 @@ jobs:
           config_timezone: "UTC"
           plugin_isocalendar: "1"
           plugin_languages: "1"
-          plugin_lines: "1"
-          plugin_lines_skipped: "lianbeast/lianbeast"
+          # plugin_lines disabled — metrics bug: TypeError: Cannot read properties of null (reading 'login')
           # plugin_skyline disabled — Puppeteer times out in GitHub Actions
 
       - name: Validate and publish
