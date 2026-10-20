@@ -16,6 +16,10 @@ jobs:
         with:
           fetch-depth: 0
 
+      # Render to a staging file, never to README.md directly. The metrics
+      # action writes its output file even when it fails — a failed run writes
+      # a GitHub API error string instead of the real README. Writing to
+      # README.md.tmp means a bad render can never touch the committed file.
       - name: Render profile (staging)
         id: render
         uses: lowlighter/metrics@latest
