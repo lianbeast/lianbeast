@@ -41,7 +41,8 @@ jobs:
           plugin_isocalendar: "1"
           plugin_languages: "1"
           plugin_lines: "1"
-          plugin_skyline: "1"
+          plugin_lines_skipped: "lianbeast/lianbeast"
+          # plugin_skyline disabled — Puppeteer times out in GitHub Actions
 
       - name: Validate and publish
         if: always()
