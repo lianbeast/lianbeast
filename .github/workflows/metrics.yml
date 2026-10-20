@@ -20,8 +20,15 @@ jobs:
       # action writes its output file even when it fails — a failed run writes
       # a GitHub API error string instead of the real README. Writing to
       # README.md.tmp means a bad render can never touch the committed file.
+      #
+      # NOTE: the metrics action decides whether to pull its prebuilt Docker
+      # image or rebuild from its Dockerfile by inspecting `github.action`
+      # (the step id, or the `uses` value when there is no id). The step must
+      # have NO `id` and no `name` that contains "metrics" — otherwise the
+      # action thinks it is a fork and rebuilds the image locally, which fails
+      # (the Dockerfile is missing xz-utils and `gem install licensed` aborts
+      # on `xzcat not found`). No id + no name keeps the official path.
       - name: Render profile (staging)
-        id: render
         uses: lowlighter/metrics@latest
         with:
           token: ${{ secrets.METRICS_TOKEN }}
