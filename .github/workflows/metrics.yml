@@ -37,6 +37,7 @@ jobs:
           markdown: https://raw.githubusercontent.com/lianbeast/lianbeast/main/.github/metrics.profile.md
           filename: README.md.tmp
           markdown_cache: .cache
+          output_action: "none"
           config_timezone: "UTC"
           plugin_isocalendar: "1"
           plugin_languages: "1"
