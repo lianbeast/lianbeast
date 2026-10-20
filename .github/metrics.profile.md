@@ -47,14 +47,6 @@ I build things that live on the web. Interactive, playful, a little bit extra.
 
 <%- await embed(`metrics-languages`, { plugin_languages: true, plugin_languages_details: "percentage, bytes-size" }) %>
 
-### 📜 Lines of Code
-
-<%- await embed(`metrics-lines`, { plugin_lines: true, plugin_lines_sections: "history, repositories", plugin_lines_history_limit: "year" }) %>
-
-### 🌆 Skyline
-
-<%- await embed(`metrics-skyline`, { plugin_skyline: true, plugin_skyline_year: "2025" }) %>
-
 ---
 
 ### 📫 Get in touch
