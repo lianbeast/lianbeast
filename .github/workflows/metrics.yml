@@ -16,18 +16,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Render to a staging file, never to README.md directly. The metrics
-      # action writes its output file even when it fails — a failed run writes
-      # a GitHub API error string instead of the real README. Writing to
-      # README.md.tmp means a bad render can never touch the committed file.
-      #
-      # NOTE: the metrics action decides whether to pull its prebuilt Docker
-      # image or rebuild from its Dockerfile by inspecting `github.action`
-      # (the step id, or the `uses` value when there is no id). The step must
-      # have NO `id` and no `name` that contains "metrics" — otherwise the
-      # action thinks it is a fork and rebuilds the image locally, which fails
-      # (the Dockerfile is missing xz-utils and `gem install licensed` aborts
-      # on `xzcat not found`). No id + no name keeps the official path.
       - name: Render profile (staging)
         uses: lowlighter/metrics@latest
         with:
@@ -42,9 +30,12 @@ jobs:
           plugin_isocalendar_duration: "year"
           plugin_languages: "1"
           plugin_languages_details: "percentage, bytes-size"
-          # plugin_lines disabled — metrics bug: TypeError: Cannot read properties of null (reading 'login')
-          # plugin_skyline disabled — Puppeteer times out in GitHub Actions
           output_action: "none"
+
+      - name: Fix image URLs
+        run: |
+          # Replace blob URLs with raw URLs for proper inline rendering
+          sed -i 's|https://github.com/lianbeast/lianbeast/blob/main/\.cache/|https://raw.githubusercontent.com/lianbeast/lianbeast/main/.cache/|g' README.md.tmp
 
       - name: Validate and publish
         if: always()
