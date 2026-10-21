@@ -40,10 +40,15 @@ jobs:
           plugin_languages_details: "percentage, bytes-size"
           output_action: "none"
 
-      - name: Extract cached metrics images
-        run: |
-          python3 .github/workflows/metrics.cache.py
-        continue-on-error: false
+      # With output_action: "none" the metrics action rewrites every cacheable
+      # <img> to a github.com blob URL but never writes the file — it only saves
+      # the rendered markdown to the runner mount. Fetch each blob through the
+      # API, materialise it in .cache/, and point the <img> at the raw URL
+      # GitHub renders inline.
+      - name: Materialise cached metrics images
+        env:
+          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+        run: python3 .github/workflows/metrics.cache.py
 
       - name: Validate and publish
         if: always()
