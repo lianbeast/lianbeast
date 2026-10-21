@@ -37,12 +37,14 @@ jobs:
           markdown: https://raw.githubusercontent.com/lianbeast/lianbeast/main/.github/metrics.profile.md
           filename: README.md.tmp
           markdown_cache: .cache
-          output_action: "none"
           config_timezone: "UTC"
           plugin_isocalendar: "1"
+          plugin_isocalendar_duration: "year"
           plugin_languages: "1"
+          plugin_languages_details: "percentage, bytes-size"
           # plugin_lines disabled — metrics bug: TypeError: Cannot read properties of null (reading 'login')
           # plugin_skyline disabled — Puppeteer times out in GitHub Actions
+          output_action: "none"
 
       - name: Validate and publish
         if: always()
