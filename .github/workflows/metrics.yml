@@ -16,6 +16,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Configure git identity
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
       - name: Ensure cache directory exists
         run: mkdir -p .cache
 
@@ -37,9 +42,7 @@ jobs:
 
       - name: Fix image URLs
         run: |
-          # Replace blob URLs with raw URLs for proper inline rendering
           sed -i 's|https://github.com/lianbeast/lianbeast/blob/main/\.cache/|https://raw.githubusercontent.com/lianbeast/lianbeast/main/.cache/|g' README.md.tmp
-          # Fix avatar URL
           sed -i 's|https://github.com/lianbeast?avatar=1|https://avatars.githubusercontent.com/lianbeast?s=240\&v=4|g' README.md.tmp
 
       - name: Validate and publish
@@ -48,7 +51,6 @@ jobs:
           set -e
           if [ -f README.md.tmp ] && grep -q "Lian Beast" README.md.tmp && ! grep -qi "did not provide a valid" README.md.tmp; then
             mv README.md.tmp README.md
-            # Commit both README and cache directory
             git add README.md .cache/
             git commit -m "[skip ci] Update GitHub metrics" || echo "Nothing to commit"
             git push
@@ -57,5 +59,3 @@ jobs:
             rm -f README.md.tmp
             exit 0
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
