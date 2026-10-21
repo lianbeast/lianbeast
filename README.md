@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://github.com/lianbeast?avatar=1" width="120" alt="Lian Beast" style="border-radius: 50%; border: 2px solid #D4AF37;"/>
+<img src="https://avatars.githubusercontent.com/lianbeast?s=240https://github.com/lianbeast?avatar=1v=4" width="120" alt="Lian Beast" style="border-radius: 50%; border: 2px solid #D4AF37;"/>
 
 </div>
 
@@ -41,11 +41,11 @@ I build things that live on the web. Interactive, playful, a little bit extra.
 
 ### 📈 This Year
 
-<img src="https://github.com/lianbeast/lianbeast/blob/main/.cache/metrics-isocalendar.svg">
+<img src="https://raw.githubusercontent.com/lianbeast/lianbeast/main/.cache/metrics-isocalendar.svg">
 
 ### 💻 Languages
 
-<img src="https://github.com/lianbeast/lianbeast/blob/main/.cache/metrics-languages.svg">
+<img src="https://raw.githubusercontent.com/lianbeast/lianbeast/main/.cache/metrics-languages.svg">
 
 ---
 
