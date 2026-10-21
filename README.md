@@ -41,11 +41,11 @@ I build things that live on the web. Interactive, playful, a little bit extra.
 
 ### 📈 This Year
 
-<img src="https://raw.githubusercontent.com/lianbeast/lianbeast/main/.cache/metrics-isocalendar.svg">
+<img src="https://raw.githubusercontent.com/lianbeast/lianbeast/main/.cache/metrics-isocalendar.svg">>
 
 ### 💻 Languages
 
-<img src="https://raw.githubusercontent.com/lianbeast/lianbeast/main/.cache/metrics-languages.svg">
+<img src="https://raw.githubusercontent.com/lianbeast/lianbeast/main/.cache/metrics-languages.svg">>
 
 ---
 
