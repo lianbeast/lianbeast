@@ -32,10 +32,12 @@ jobs:
           plugin_languages_details: "percentage, bytes-size"
           output_action: "none"
 
-      - name: Fix image URLs
+      - name: Fix image URLs and avatar
         run: |
-          # Replace blob URLs with raw URLs for proper inline rendering
+          # Replace blob URLs with raw URLs for metrics images
           sed -i 's|https://github.com/lianbeast/lianbeast/blob/main/\.cache/|https://raw.githubusercontent.com/lianbeast/lianbeast/main/.cache/|g' README.md.tmp
+          # Replace broken avatar URL
+          sed -i 's|https://github.com/lianbeast?avatar=1|https://avatars.githubusercontent.com/lianbeast?s=240\&v=4|g' README.md.tmp
 
       - name: Validate and publish
         if: always()
