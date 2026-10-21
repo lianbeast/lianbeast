@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://github.com/lianbeast?avatar=1" width="120" alt="Lian Beast" style="border-radius: 50%; border: 2px solid #D4AF37;"/>
+<img src="https://avatars.githubusercontent.com/lianbeast?s=240&v=4" width="120" alt="Lian Beast" style="border-radius: 50%; border: 2px solid #D4AF37;"/>
 
 </div>
 
