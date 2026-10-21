@@ -41,11 +41,11 @@ I build things that live on the web. Interactive, playful, a little bit extra.
 
 ### 📈 This Year
 
-<%- await embed(`metrics-isocalendar`, { plugin_isocalendar: true, plugin_isocalendar_duration: "year" }) %>
+<%- await embed(`metrics-isocalendar`, { plugin_isocalendar: true }) %>
 
 ### 💻 Languages
 
-<%- await embed(`metrics-languages`, { plugin_languages: true, plugin_languages_details: "percentage, bytes-size" }) %>
+<%- await embed(`metrics-languages`, { plugin_languages: true }) %>
 
 ---
 
