@@ -37,16 +37,23 @@ def fetch_blob(path):
 
 count = 0
 
+def ext_from_fmt(fmt):
+    """Convert svg+xml, jpeg, png -> svg, jpg, png"""
+    if fmt == "svg+xml":
+        return "svg"
+    return fmt
+
 def repl_b64(m):
     global count
     name = m.group("name")
-    fmt = m.group("fmt").replace("+", "")
+    fmt = m.group("fmt")
     content = m.group("content")
-    local = os.path.join(CACHE, f"{name}.{fmt}")
+    ext = ext_from_fmt(fmt)
+    local = os.path.join(CACHE, f"{name}.{ext}")
     with open(local, "wb") as f:
         f.write(base64.b64decode(content))
     count += 1
-    return f'<img src="https://raw.githubusercontent.com/{OWNER}/{REPO}/{BRANCH}/{CACHE}/{name}.{fmt}">'
+    return f'<img src="https://raw.githubusercontent.com/{OWNER}/{REPO}/{BRANCH}/{CACHE}/{name}.{ext}">'
 
 def repl_blob(m):
     global count
@@ -56,6 +63,7 @@ def repl_blob(m):
     with open(local, "wb") as f:
         f.write(data)
     count += 1
+    # Use the same basename (which already has .svgxml from the action)
     return f'<img src="https://raw.githubusercontent.com/{OWNER}/{REPO}/{BRANCH}/{CACHE}/{os.path.basename(path)}">'
 
 text = b64_re.sub(repl_b64, text)
