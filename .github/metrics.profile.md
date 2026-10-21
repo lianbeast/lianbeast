@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<img src="https://github.com/lianbeast?avatar=1" width="120" alt="Lian Beast" style="border-radius: 50%; border: 2px solid #D4AF37;"/>
+<img src="https://avatars.githubusercontent.com/lianbeast?s=240&v=4" width="120" alt="Lian Beast" style="border-radius: 50%; border: 2px solid #D4AF37;"/>
 
 </div>
 
@@ -11,8 +11,8 @@
 I build things that live on the web. Interactive, playful, a little bit extra.
 
 [![GitHub followers](https://img.shields.io/github/followers/lianbeast?style=for-the-badge&logo=github&label=followers)](https://github.com/lianbeast)
-[![GitHub repos](https://img.shields.io/github/repo-count/lianbeast?style=for-the-badge&logo=github&label=repos)](https://github.com/lianbeast?tab=repositories)
-[![GitHub stars](https://img.shields.io/github/stars/lianbeast?style=for-the-badge&logo=github&label=stars)](https://github.com/lianbeast?tab=stars)
+[![Public repos](https://img.shields.io/github/public-repos/lianbeast?style=for-the-badge&logo=github&label=repos)](https://github.com/lianbeast?tab=repositories)
+[![Stars received](https://img.shields.io/github/stars/lianbeast/Personal-Site?style=for-the-badge&logo=github&label=stars)](https://github.com/lianbeast?tab=stars)
 
 ---
 
