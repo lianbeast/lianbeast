@@ -40,11 +40,18 @@ jobs:
           plugin_languages_details: "percentage, bytes-size"
           output_action: "none"
 
+      # The metrics action writes its render to the runner mount
+      # (/metrics_renders/README.md.tmp), not to the checked-out repo file, so
+      # the stale committed README.md.tmp would be read by later steps. Copy
+      # the fresh render into the working tree before anything else touches it.
+      - name: Copy fresh render into working tree
+        run: cp /metrics_renders/README.md.tmp README.md.tmp
+
       # With output_action: "none" the metrics action rewrites every cacheable
-      # <img> to a github.com blob URL but never writes the file — it only saves
-      # the rendered markdown to the runner mount. Fetch each blob through the
-      # API, materialise it in .cache/, and point the <img> at the raw URL
-      # GitHub renders inline.
+      # <img> to a github.com blob URL (github.com/.../blob/main/.cache/<name>.<ext>)
+      # but never writes the file itself — it only saves the rendered markdown to
+      # the runner mount. Fetch each blob through the API, materialise it in
+      # .cache/, and point the <img> at the raw URL GitHub renders inline.
       - name: Materialise cached metrics images
         env:
           METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
