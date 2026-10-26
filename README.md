@@ -46,11 +46,11 @@ No templates, no page builders. Every one of these is hand-built, and every one 
 
 ## ◢ This year
 
-<img src="https://raw.githubusercontent.com/lianbeast/lianbeast/main/.cache/metrics-isocalendar.svg" alt="Contribution isocalendar for the last year">
+<img src="https://raw.githubusercontent.com/lianbeast/lianbeast/main/.cache/metrics-isocalendar.svg">>
 
 ## ◢ Languages
 
-<img src="https://raw.githubusercontent.com/lianbeast/lianbeast/main/.cache/metrics-languages.svg" alt="Most used languages">
+<img src="https://raw.githubusercontent.com/lianbeast/lianbeast/main/.cache/metrics-languages.svg">>
 
 ---
 
