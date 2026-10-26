@@ -12,9 +12,9 @@ Scroll films, 3D brand sites, spatial tools, and the occasional C program to dri
 No templates, no page builders. Every one of these is hand-built, and every one is still running.
 
 <p>
-  <a href="https://github.com/lianbeast?tab=repositories"><img src="https://img.shields.io/badge/REPOSITORIES-170-d4af37?style=for-the-badge&labelColor=120e06" alt="Repositories"></a>
-  <a href="https://lianbeast.github.io/Personal-Site/"><img src="https://img.shields.io/badge/PERSONAL_SITE-open-f0c453?style=for-the-badge&labelColor=120e06" alt="Personal site"></a>
-  <a href="mailto:lianbeast.905@gmail.com"><img src="https://img.shields.io/badge/EMAIL-say_hello-a8791f?style=for-the-badge&labelColor=120e06" alt="Email"></a>
+  <a href="https://github.com/lianbeast?tab=repositories"><img src="https://img.shields.io/badge/REPOSITORIES-170-8b5cf6?style=for-the-badge&labelColor=0b0716" alt="Repositories"></a>
+  <a href="https://lianbeast.github.io/Personal-Site/"><img src="https://img.shields.io/badge/PERSONAL_SITE-open-22d3ee?style=for-the-badge&labelColor=0b0716" alt="Personal site"></a>
+  <a href="mailto:lianbeast.905@gmail.com"><img src="https://img.shields.io/badge/EMAIL-say_hello-6d28d9?style=for-the-badge&labelColor=0b0716" alt="Email"></a>
 </p>
 
 ---
