@@ -1,7 +1,7 @@
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lianbeast/lianbeast/main/assets/banner-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lianbeast/lianbeast/main/assets/banner-light.svg">
-  <img src="https://raw.githubusercontent.com/lianbeast/lianbeast/main/assets/banner-dark.svg" width="100%" alt="Lian Beast — builder, dreamer, explorer">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/lianbeast/lianbeast/main/assets/banner-dark.svg?v=2">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/lianbeast/lianbeast/main/assets/banner-light.svg?v=2">
+  <img src="https://raw.githubusercontent.com/lianbeast/lianbeast/main/assets/banner-dark.svg?v=2" width="100%" alt="Lian Beast — builder, dreamer, explorer">
 </picture>
 
 <br>
